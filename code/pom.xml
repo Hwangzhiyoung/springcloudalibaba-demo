@@ -11,6 +11,10 @@
         <module>stock</module>
         <module>order-nacos</module>
         <module>stock-nacos</module>
+        <module>order-ribbon</module>
+        <module>order-loadblancer</module>
+        <module>order-openfeign</module>
+        <module>product-nacos</module>
     </modules>
     <!--springboot的版本管理器 以后公司中开发就可以使用parent去继承公司自定义的父maven项目-->
 

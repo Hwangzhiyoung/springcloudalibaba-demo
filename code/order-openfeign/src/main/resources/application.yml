@@ -1,0 +1,27 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      server-addr: 192.168.137.137:8847
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: public
+logging:
+  level:
+    com.tulingxueyuan.order.feign: debug
+
+feign:
+  client:
+    config:
+      product-service:
+        loggerLevel: FULL
+#        连接超时时间默认2s
+        connectTimeout: 2000
+#        请求处理超时时间默认5s
+        readTimeout: 5000
+        requestInterceptors[0]:
+          com.tulingxueyuan.order.interceptor.feign.CustomFeignInterceptor
